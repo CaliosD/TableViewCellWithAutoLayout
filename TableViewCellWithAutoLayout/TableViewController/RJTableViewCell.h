@@ -25,12 +25,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RJModel.h"
 
 @interface RJTableViewCell : UITableViewCell
 
 @property (strong, nonatomic) IBOutlet UILabel *titleLabel;
 @property (strong, nonatomic) IBOutlet UILabel *bodyLabel;
 
-- (void)updateFonts;
+- (void)configureCellWithDict:(NSDictionary *)dict;
+
+- (CGFloat)getCellHeightWithDict:(NSDictionary *)dict andTVWidth:(CGFloat)width;
 
 @end
